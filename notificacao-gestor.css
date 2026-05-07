@@ -1,0 +1,74 @@
+/* VARIÁVEIS */
+:root {
+    --verde-agil-claro: #38a385;
+    --verde-agil-escuro: #064e3b;
+    --verde-hover: #e9f2f0;
+    --sidebar-width: 250px;
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* SIDEBAR FIXA - CORRIGE O PROBLEMA DO PRINT */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: white;
+    border-right: 1px solid #dee2e6;
+    z-index: 1050;
+    padding: 1.5rem !important;
+}
+
+/* CONTEÚDO AFASTADO DA SIDEBAR */
+.main-content {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header-integrated {
+    background-color: white;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LINKS DA SIDEBAR */
+.sidebar .nav-link {
+    color: #6c757d !important;
+    border-radius: 12px;
+    padding: 12px 15px !important;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover, 
+.sidebar .nav-link.active {
+    color: #0b7051 !important;
+    background-color: var(--verde-hover) !important;
+}
+
+/* LISTA DE NOTIFICAÇÕES */
+.item-notificacao {
+    transition: background 0.2s;
+}
+
+.item-notificacao:hover {
+    background-color: #fcfcfc;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+
