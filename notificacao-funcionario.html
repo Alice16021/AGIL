@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGIL - Notificações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="notificacao-funcionario.css">
+    <style>
+        /* Efeito de hover nas mensagens */
+        .item-notificacao {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item-notificacao:hover {
+            background-color: #f8fafc !important;
+            transform: translateX(5px);
+        }
+        
+        /* Ajuste para forçar o Ajuda para o rodapé da sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+     <div class="container-fluid p-0">
+        <nav class="sidebar p-4 d-flex flex-column">
+            <div class="logo mb-5 d-flex align-items-center">
+                <img src="logo.png" alt="Logo" width="40">
+                <span class="ms-3 fw-bold text-success" style="font-size: 1.8rem;">AGIL</span>
+            </div>
+
+            <ul class="nav flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="inicio-funcionario.html" class="nav-link">
+                        <i class="bi bi-grid-fill me-2"></i> Início
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-compass me-2"></i> Produtos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-file-earmark-richtext me-2"></i> Histórico
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notificacao-funcionario.html" class="nav-link">
+                        <i class="bi bi-bell me-2"></i> Notificação
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-auto pt-4 border-top">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-question-circle me-2"></i> Ajuda
+                </a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header class="header-integrated shadow-sm mb-4">
+                <div class="input-group w-50 rounded-pill overflow-hidden border">
+                    <input type="text" class="form-control border-0 p-2 ps-4 search-bar" placeholder="Buscar">
+                    <span class="input-group-text border-0 pe-4 search-bar"><i class="bi bi-search text-muted"></i></span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <span class="fw-semibold text-dark me-3">Maria Isabel</span>
+                    <a href="#" class="text-decoration-none">
+                        <div class="rounded-circle border overflow-hidden shadow-sm" style="width: 45px; height: 45px;">
+                            <img src="https://i.pravatar.cc/45?img=47" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <div class="container-fluid px-4 px-lg-5">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4 shadow-sm" 
+                     style="background: linear-gradient(90deg, #38a385 0%, #1c7a5f 50%, #064e3b 100%) !important; 
+                            padding: 1rem 2rem; 
+                            border-radius: 12px; 
+                            color: white !important;
+                            border: none;">
+                    <h2 class="fw-bold fs-5 mb-0" style="color: white !important; margin: 0;">Notificações</h2>
+                    <i class="bi bi-bell-fill" style="color: white !important; font-size: 1.2rem;"></i>
+                </div>
+
+                <div class="bg-white rounded-4 shadow-sm border overflow-hidden mb-5">
+                    
+                    <div class="p-4 border-bottom item-notificacao">
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: #334155;">Estoque Crítico</h6>
+                            <p class="text-muted small mb-0">O item Luvas Descartáveis (P) está com apenas 12 unidades disponíveis.</p>
+                        </div>
+                        <div class="dot bg-danger" style="width: 10px; height: 10px; border-radius: 50%;"></div>
+                    </div>
+
+                    <div class="p-4 border-bottom item-notificacao">
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: #334155;">Estoque Baixo</h6>
+                            <p class="text-muted small mb-0">Seringas 5ml atingiram o limite mínimo (25 unidades restantes).</p>
+                        </div>
+                        <div class="dot bg-danger" style="width: 10px; height: 10px; border-radius: 50%;"></div>
+                    </div>
+
+                    <div class="p-4 border-bottom item-notificacao">
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: #334155;">Novo Pedido Registrado</h6>
+                            <p class="text-muted small mb-0">Pedido #4587 de Máscaras Cirúrgicas registrado com sucesso.</p>
+                        </div>
+                        <div class="dot bg-success" style="width: 10px; height: 10px; border-radius: 50%;"></div>
+                    </div>
+
+                    <div class="p-4 item-notificacao">
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: #334155;">Entrada de Estoque</h6>
+                            <p class="text-muted small mb-0">Foram adicionadas 200 unidades de Compressas de Gaze.</p>
+                        </div>
+                        <div class="dot bg-warning" style="width: 10px; height: 10px; border-radius: 50%;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
