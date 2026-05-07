@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGIL - Sistema de Estoque</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="inicio-funcionario.css">
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <nav class="sidebar p-4 d-flex flex-column">
+            <div class="logo mb-5 d-flex align-items-center">
+                <img src="logo.png" alt="Logo" width="40">
+                <span class="ms-3 fw-bold text-success" style="font-size: 1.8rem;">AGIL</span>
+            </div>
+
+            <ul class="nav flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="inicio-funcionario.html" class="nav-link">
+                        <i class="bi bi-grid-fill me-2"></i> Início
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="produtos-funcionario.html" class="nav-link">
+                        <i class="bi bi-compass me-2"></i> Produtos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="historico-funcionario.html" class="nav-link">
+                        <i class="bi bi-file-earmark-richtext me-2"></i> Histórico
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="notificacao-funcionario.html" class="nav-link">
+                        <i class="bi bi-bell me-2"></i> Notificação
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-auto pt-4 border-top">
+                <a href="ajuda-funcionario.html" class="nav-link">
+                    <i class="bi bi-question-circle me-2"></i> Ajuda
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <header class="header-integrated shadow-sm">
+                <div class="input-group w-50 rounded-pill overflow-hidden border">
+                    <input type="text" class="form-control border-0 p-2 ps-4 search-bar" placeholder="Buscar">
+                    <span class="input-group-text border-0 pe-4 search-bar">
+                        <i class="bi bi-search text-muted"></i>
+                    </span>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <span class="fw-semibold text-dark me-3">Maria Isabel</span>
+                    <a href="editar-perfil.html" class="text-decoration-none">
+                        <div class="rounded-circle border overflow-hidden shadow-sm profile-img-container">
+                            <img src="https://i.pravatar.cc/45?img=47" alt="Avatar" class="w-100 h-100 object-fit-cover">
+                        </div>
+                    </a>
+                </div>
+            </header>
+
+            <div class="px-md-5 content-body">
+                <div class="row justify-content-center">
+                    <div class="col-md-11">
+                        <div class="banner text-white p-5 rounded-4 mb-4 shadow-sm">
+                            <h2 class="fw-bold display-6">Bem-vindo ao Sistema de Estoque</h2>
+                            <p class="mb-0 fs-5 opacity-75">Gerencie seus produtos e acompanhe o consumo em tempo real.</p>
+                        </div>
+
+                        <div class="row mx-0 mb-3 p-3 rounded-pill text-white fw-bold align-items-center tabela-header shadow-sm">
+                            <div class="col-3">Produto</div>
+                            <div class="col-3 text-center">Data</div>
+                            <div class="col-3 text-center">Quantidade</div>
+                            <div class="col-3 text-end">Responsável</div>
+                        </div>
+
+                        <div class="bg-white rounded-4 shadow-sm border overflow-hidden mb-5 lista-medicamentos">
+                            <div class="row mx-0 py-3 align-items-center border-bottom">
+                                <div class="col-3"><span class="fw-bold d-block">Dipirona</span><small class="text-muted">Analgésico</small></div>
+                                <div class="col-3 text-center">Hoje, 14:20</div>
+                                <div class="col-3 text-center fw-bold">10 un.</div>
+                                <div class="col-3 text-end pe-4 text-muted small">Dr. Ricardo</div>
+                            </div>
+                            <div class="row mx-0 py-3 align-items-center border-bottom">
+                                <div class="col-3"><span class="fw-bold d-block">Amoxicilina</span><small class="text-muted">Antibiótico</small></div>
+                                <div class="col-3 text-center">Hoje, 13:45</div>
+                                <div class="col-3 text-center fw-bold">25 un.</div>
+                                <div class="col-3 text-end pe-4 text-muted small">Enf. Juliana</div>
+                            </div>
+
+                            <div class="text-center py-3 bg-light-subtle">
+                                <a href="historico-funcionario.html" class="text-success fw-bold text-decoration-none small">
+                                    Visualizar histórico completo <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
