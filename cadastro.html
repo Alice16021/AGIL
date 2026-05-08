@@ -1,62 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/cad.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/cad.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="img/Design_sem_nome__2_-removebg-preview.png">
+
 </head>
+
 <body>
 
-<div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow border-0 p-4" style="width: 100%; max-width: 900px; border-radius: 20px;">
-        <div class="row align-items-center">
-            
-            <div class="col-md-5 text-center">
-                <img src="img/Logo_semfundo.png" class="img-fluid mb-3" style="max-width: 150px;" alt="Logo">
-                <h1 class="fw-bold">Crie sua conta</h1>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow border-0 p-4" style="width: 100%; max-width: 900px; border-radius: 20px;">
+            <div class="row align-items-center">
+
+                <div class="col-md-5 text-center">
+                    <img src="img/Logo_semfundo.png" class="img-fluid mb-3" style="max-width: 150px;" alt="Logo">
+                    <h1 class="fw-bold">Crie sua conta</h1>
+                </div>
+
+                <div class="col-md-7">
+                    <form>
+                        <div class="mb-2">
+                            <input type="text" class="form-control custom-input" placeholder="Nome completo">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control custom-input" placeholder="CNPJ">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control custom-input" placeholder="E-mail">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control custom-input" placeholder="Nome da empresa">
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control custom-input" placeholder="Razão social">
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control custom-input" placeholder="Senha">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control custom-input" placeholder="Confirmar senha">
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="termos">
+                            <label class="form-check-label" for="termos">Aceito os termos</label>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-dark btn-lg shadow-sm"
+                                style="border-radius: 12px;"><a href="login.html" class="text-reset">Criar Conta</a></button> 
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div class="col-md-7">
-                <form>
-                    <div class="mb-2">
-                        <input type="text" class="form-control custom-input" placeholder="Nome completo">
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control custom-input" placeholder="CNPJ">
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control custom-input" placeholder="E-mail">
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control custom-input" placeholder="Nome da empresa">
-                    </div>
-                    <div class="mb-2">
-                        <input type="text" class="form-control custom-input" placeholder="Razão social">
-                    </div>
-                    <div class="mb-2">
-                        <input type="password" class="form-control custom-input" placeholder="Senha">
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control custom-input" placeholder="Confirmar senha">
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="termos">
-                        <label class="form-check-label" for="termos">Aceito os termos</label>
-                    </div>
-
-                    <div class="d-grid mt-4">
-                        <button type="submit" class="btn btn-dark btn-lg shadow-sm" style="border-radius: 12px;">Criar Conta</button>
-                    </div>
-                </form>
-            </div>
-            
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
