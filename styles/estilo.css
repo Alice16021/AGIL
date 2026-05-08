@@ -200,12 +200,12 @@ body {
 
 /* Hover Individual por ID */
 #func-pedro:hover { background-color: #e9f5f1; transform: translateX(8px); }
-#func-paulo:hover { background-color: #f0f4f8; transform: translateX(8px); }
-#func-ana:hover { background-color: #fff5f5; transform: translateX(8px); }
-#func-maria:hover { background-color: #f2f2f2; transform: translateX(8px); } 
-#func-felipe:hover { background-color: #f2f2f2; transform: translateX(8px); } 
-#func-marina:hover { background-color: #f2f2f2; transform: translateX(8px); } 
-#func-bruno:hover { background-color: #f2f2f2; transform: translateX(8px); }
+#func-paulo:hover { background-color: #e9f5f1; transform: translateX(8px); }
+#func-ana:hover { background-color: #e9f5f1; transform: translateX(8px); }
+#func-maria:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-felipe:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-marina:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-bruno:hover { background-color: #e9f5f1; transform: translateX(8px); }
 
 /* Efeito nos ícones e textos */
 .item-colaborador:hover i {
