@@ -36,7 +36,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 900;
 }
@@ -47,7 +47,7 @@ main {
     transition: all 0.3s ease;
     border-radius: 8px;
     padding: 12px 15px !important;
-    margin-bottom: 5px;
+    margin-bottom: 0 !important;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -72,3 +72,80 @@ main {
 .profile-img-container:hover { transform: scale(1.1); }
 .object-fit-cover { object-fit: cover; }
 .content-body { padding-top: 2.5rem; padding-bottom: 3rem; }
+
+ .item-notificacao {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .item-notificacao:hover {
+            background-color: #f8fafc !important;
+            transform: translateX(5px);
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+@media (max-width: 768px) {
+    
+    .sidebar {
+        position: relative !important; 
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 1rem !important;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .sidebar .nav {
+        flex-direction: row !important;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .header-integrated {
+        padding: 1rem !important;
+        flex-direction: column-reverse; 
+        gap: 15px;
+    }
+
+    .header-integrated .input-group {
+        width: 100% !important; 
+    }
+
+    .container-fluid.px-4 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .item-notificacao {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .sidebar .nav-link span {
+        display: none; 
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        position: fixed;
+        width: var(--sidebar-width);
+    }
+    
+    main {
+        margin-left: var(--sidebar-width);
+    }
+}
