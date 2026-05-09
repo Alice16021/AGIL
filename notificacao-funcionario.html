@@ -7,108 +7,64 @@
     <title>AGIL - Notificações</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles/notificacao-funcionario.css">
+    <link rel="stylesheet" href="styles/estilo.css">
     <link rel="icon" href="img/Design_sem_nome__2_-removebg-preview.png">
 
-    <style>
-        .item-notificacao {
-            transition: all 0.2s ease-in-out;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .item-notificacao:hover {
-            background-color: #f8fafc !important;
-            transform: translateX(5px);
-        }
-
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="container-fluid p-0">
-        <nav class="sidebar p-4 d-flex flex-column">
-            <div class="logo mb-5 d-flex align-items-center">
-                <a href="inicio-gestor.html"><img src="img/logo.png" alt="Logo" width="40" ></a>
-                <span class="ms-3 fw-bold text-success" style="font-size: 1.8rem;">AGIL</span>
+    <div class="d-flex flex-column flex-md-row p-3 gap-3">
+
+        <div class="sidebar position-relative d-md-block">
+            <div class="logo">
+                <a href="inicio-gestor.html"><img src="img/logo.png" alt="Logo" width="40"></a>
             </div>
 
-            <ul class="nav flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="inicio-gestor.html" class="nav-link">
-                        <i class="bi bi-grid-fill me-2"></i> Início
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="produtos.html" class="nav-link">
-                        <i class="bi bi-compass me-2"></i> Produtos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="historico.html" class="nav-link">
-                        <i class="bi bi-file-earmark-richtext me-2"></i> Histórico
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="notificacao-funcionario.html" class="nav-link">
-                        <i class="bi bi-bell me-2"></i> Notificação
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="funcionarios.html" class="nav-link">
-                        <i class="bi bi-people me-2"></i> Funcionários
-                    </a>
-                </li>
+            <ul class="nav flex-column">
+                <li><a href="inicio-gestor.html" class="nav-link"><i class="bi bi-grid"></i> <span
+                            class="d-none d-lg-inline">Início</span></a></li>
+                <li><a href="produtos.html" class="nav-link"><i class="bi bi-box"></i> <span
+                            class="d-none d-lg-inline">Produtos</span></a></li>
+                <li><a href="historico.html" class="nav-link"><i class="bi bi-file-earmark"></i> <span
+                            class="d-none d-lg-inline">Histórico</span></a></li>
+                <li><a href="notificacao-funcionario.html" class="nav-link active"><i class="bi bi-bell"></i> <span
+                            class="d-none d-lg-inline">Notificação</span></a></li>
+                <li><a href="funcionarios.html" class="nav-link"><i class="bi bi-people"></i> <span
+                            class="d-none d-lg-inline">Funcionários</span></a></li>
             </ul>
 
-            <div class="mt-auto pt-4 ">
-                <a href="#" class="nav-link">
-                    <i class="bi bi-question-circle me-2"></i> Ajuda
+            <div class="nav-bottom d-none d-md-block">
+                <a href="ajuda.html" class="nav-link">
+                    <i class="bi bi-question-circle"></i> <span class="d-none d-lg-inline">Ajuda</span>
                 </a>
             </div>
-        </nav>
+        </div>
 
-        <main class="main-content">
-            <header class="header-integrated shadow-sm mb-4">
-                <div class="input-group w-50 rounded-pill overflow-hidden border">
-                    <input type="text" class="form-control border-0 p-2 ps-4 search-bar" placeholder="Buscar">
-                    <span class="input-group-text border-0 pe-4 search-bar"><i
-                            class="bi bi-search text-muted"></i></span>
+        <div class="flex-grow-1 w-100">
+
+
+            <div class="header d-flex align-items-center justify-content-between">
+                <div class="search-box w-50 position-relative">
+                    <input type="text" class="form-control rounded-pill ps-4 pe-5" placeholder="Buscar">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3"></i>
                 </div>
 
-                <div class="d-flex align-items-center">
-                    <span class="fw-semibold text-dark me-3">Claudia Alves</span>
-                    <a href="#" class="text-decoration-none">
-                        <div class="rounded-circle border overflow-hidden shadow-sm" style="width: 45px; height: 45px;">
-                            <img src="img/claudia_alves.png" alt="Avatar"
-                                class="w-100 h-100 object-fit-cover">
-                        </div>
-                    </a>
+                <div class="user d-flex align-items-center gap-2">
+                    <span class="fw-medium">Claudia Alves</span>
+                    <img src="img/claudia_alves.png" class="rounded-circle" width="35">
                 </div>
-            </header>
+            </div>
 
-            <div class="container-fluid px-4 px-lg-5">
+            <div class="notificacao_banner d-flex justify-content-between align-items-center mb-3 shadow-sm">
+                <h4 class="fw-bold mb-0 p-2">Notificações</h4>
+                <i class="bi bi-bell-fill fs-4 "></i>
+            </div>
 
-                <div class="d-flex justify-content-between align-items-center mb-4 shadow-sm" style="background: linear-gradient(90deg, #38a385 0%, #1c7a5f 50%, #064e3b 100%) !important; 
-                            padding: 1rem 2rem; 
-                            border-radius: 12px; 
-                            color: white !important;
-                            border: none;">
-                    <h2 class="fw-bold fs-5 mb-0" style="color: white !important; margin: 0;">Notificações</h2>
-                    <i class="bi bi-bell-fill" style="color: white !important; font-size: 1.2rem;"></i>
-                </div>
+            <div class="bg-white rounded-4 shadow-sm overflow-hidden mb-5">
 
-                <div class="bg-white rounded-4 shadow-sm border overflow-hidden mb-5">
-
-                    <div class="p-4 border-bottom item-notificacao">
+                <div class="p-4 border-bottom item-notificacao">
+                    <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h6 class="fw-bold mb-1" style="color: #334155;">Estoque Crítico</h6>
                             <p class="text-muted small mb-0">O item Luvas Descartáveis (P) está com apenas 12 unidades
@@ -116,8 +72,10 @@
                         </div>
                         <div class="dot bg-danger" style="width: 10px; height: 10px; border-radius: 50%;"></div>
                     </div>
+                </div>
 
-                    <div class="p-4 border-bottom item-notificacao">
+                <div class="p-4 border-bottom item-notificacao">
+                    <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h6 class="fw-bold mb-1" style="color: #334155;">Estoque Baixo</h6>
                             <p class="text-muted small mb-0">Seringas 5ml atingiram o limite mínimo (25 unidades
@@ -125,8 +83,10 @@
                         </div>
                         <div class="dot bg-danger" style="width: 10px; height: 10px; border-radius: 50%;"></div>
                     </div>
+                </div>
 
-                    <div class="p-4 border-bottom item-notificacao">
+                <div class="p-4 border-bottom item-notificacao">
+                    <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h6 class="fw-bold mb-1" style="color: #334155;">Novo Pedido Registrado</h6>
                             <p class="text-muted small mb-0">Pedido #4587 de Máscaras Cirúrgicas registrado com sucesso.
@@ -134,18 +94,20 @@
                         </div>
                         <div class="dot bg-success" style="width: 10px; height: 10px; border-radius: 50%;"></div>
                     </div>
+                </div>
 
-                    <div class="p-4 item-notificacao">
+                <div class="p-4 item-notificacao">
+                    <div class="d-flex justify-content-between align-items-center">
                         <div>
                             <h6 class="fw-bold mb-1" style="color: #334155;">Entrada de Estoque</h6>
                             <p class="text-muted small mb-0">Foram adicionadas 200 unidades de Compressas de Gaze.</p>
                         </div>
                         <div class="dot bg-warning" style="width: 10px; height: 10px; border-radius: 50%;"></div>
                     </div>
-
                 </div>
+
             </div>
-        </main>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
