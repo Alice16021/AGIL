@@ -1,22 +1,32 @@
-
-body {
-    background-color: #f5f5f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --verde-agil: #0b7051;
+    --verde-claro: #40b094;
+    --bg-fundo: #f5f5f5;
+    --sidebar-width: 250px;
 }
 
+body {
+    background-color: var(--bg-fundo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* --- ESTRUTURA SIDEBAR (PADRONIZADA) --- */
 .sidebar {
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100vh;
     background: #fff;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #0000000d;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    position: sticky; /* Melhor que fixed para layouts flex */
+    top: 0;
     transition: all 0.3s ease;
 }
 
 .logo {
     font-weight: bold;
-    color: #6c9c8c;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -29,29 +39,33 @@ body {
     max-height: 50px;
 }
 
+/* Links da Sidebar */
 .nav-link {
-    color: #555;
-    margin-bottom: 10px;
+    color: #6c757d !important;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: 0.2s;
+    padding: 12px 15px !important;
+    border-radius: 8px;
+    transition: all 0.2s;
+    text-decoration: none !important;
 }
 
 .nav-link:hover, .nav-link.active {
-    background-color: #e9f5f1;
-    border-radius: 8px;
-    color: #2c7a7b;
+    background-color: rgba(11, 112, 81, 0.08) !important;
+    color: var(--verde-agil) !important;
 }
 
+/* Área do Botão Ajuda */
 .nav-bottom {
-    position: absolute;
-    bottom: 20px;
-    width: 80%;
+    margin-top: auto; /* Empurra para o final no desktop */
+    padding-top: 20px;
 }
 
+/* --- CONTEÚDO E HEADER --- */
 .header {
-    background: transparent !important;
+    background: transparent;
     padding: 15px 0;
     margin-bottom: 30px;
 }
@@ -60,22 +74,48 @@ body {
     border: none;
     background: #e9e9e9;
     height: 40px;
+    border-radius: 50px;
 }
 
-.search-box input:focus {
-    box-shadow: none;
-    background: #e9e9e9;
+/* --- CARDS E NOTIFICAÇÕES --- */
+.item-notificacao, .item-colaborador {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background: white;
 }
 
-.colaborators-card {
+.item-notificacao:hover, .item-colaborador:hover {
+    background-color: #e9f5f1 !important;
+    transform: translateX(8px);
+}
+
+.item-notificacao:hover h6, .item-colaborador:hover h6 {
+    color: var(--verde-agil);
+}
+
+.notificacao_banner {
     background: #1f8a70;
     color: white;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 50px !important;
+}
+
+.notificacao_banner h4 {
+    font-size: 1.5rem;
+}
+
+.colaborators-card{
+    background: #1f8a70;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px !important;
 }
 
 .faq-banner {
-    background-color: #067254; 
+    background-color: #067254;
     color: white;
     padding: 40px;
     border-radius: 15px;
@@ -83,42 +123,14 @@ body {
 }
 
 .faq-banner h2 {
-    font-size: 2.5rem;
+    font-size: 2 rem;
     margin-bottom: 5px;
 }
 
-.accordion-item {
-    border: none !important;
-    border-bottom: 1px solid #eee !important;
-}
-
-.accordion-button {
-    font-weight: 500;
-    color: #333 !important;
-    background-color: transparent !important;
-    padding-left: 0 !important;
-}
-
-.accordion-button:not(.collapsed) {
-    box-shadow: none !important;
-    color: #067254 !important;
-}
-
-.accordion-button::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
-    background-color: #f1f1f1;
-    border-radius: 50%;
-    padding: 12px;
-    background-size: 12px;
-    background-position: center;
-}
-
-.accordion-body {
-    padding-left: 0 !important;
-}
-
+/* --- RESPONSIVIDADE (Onde a mágica acontece) --- */
 @media (max-width: 768px) {
-    .d-flex.flex-md-row {
+    /* Container pai passa a ser coluna */
+    .d-flex.flex-column.flex-md-row {
         flex-direction: column !important;
         padding: 10px !important;
     }
@@ -126,90 +138,42 @@ body {
     .sidebar {
         width: 100% !important;
         height: auto !important;
-        padding: 15px !important;
-        display: flex !important;
-        flex-direction: row !important;
+        padding: 10px !important;
+        flex-direction: row !important; /* Sidebar vira barra horizontal */
         align-items: center;
         justify-content: space-between;
-        position: static !important;
-        border-radius: 10px;
+        position: relative !important;
+        border-radius: 12px;
+        margin-bottom: 15px;
     }
 
-    .logo {
-        margin-bottom: 0 !important;
-    }
+    .logo { margin-bottom: 0 !important; }
 
     .sidebar .nav {
         flex-direction: row !important;
         gap: 5px;
+        flex-grow: 1;
+        justify-content: space-evenly;
+    }
+
+    /* Ajuste do botão ajuda no Mobile */
+    .nav-bottom {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        display: block !important;
     }
 
     .nav-link {
-        margin-bottom: 0 !important;
         padding: 10px !important;
+        margin-bottom: 0 !important;
     }
 
-    .nav-bottom {
-        display: none; 
-    }
+    .nav-link span { display: none; } /* Esconde texto, deixa só ícones */
 
     .header {
         flex-direction: column-reverse;
         gap: 15px;
-        align-items: flex-start !important;
     }
 
-    .search-box {
-        width: 100% !important;
-    }
-
-    .user {
-        align-self: flex-end;
-    }
-
-    .faq-banner {
-        padding: 25px !important;
-    }
-    
-    .faq-banner h2 {
-        font-size: 1.6rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-link i {
-        font-size: 1.3rem;
-    }
-
-    .nav-link span {
-        display: none;
-    }
-}
-
-.item-colaborador {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 8px; /* Adicionado para o fundo não ficar quadrado */
-}
-
-/* Hover Individual por ID */
-#func-pedro:hover { background-color: #e9f5f1; transform: translateX(8px); }
-#func-paulo:hover { background-color: #e9f5f1; transform: translateX(8px); }
-#func-ana:hover { background-color: #e9f5f1; transform: translateX(8px); }
-#func-maria:hover { background-color: #e9f5f1; transform: translateX(8px); } 
-#func-felipe:hover { background-color: #e9f5f1; transform: translateX(8px); } 
-#func-marina:hover { background-color: #e9f5f1; transform: translateX(8px); } 
-#func-bruno:hover { background-color: #e9f5f1; transform: translateX(8px); }
-
-/* Efeito nos ícones e textos */
-.item-colaborador:hover i {
-    color: #1f8a70 !important;
-    transform: scale(1.2);
-    transition: 0.3s;
-}
-
-.item-colaborador:hover h6 {
-    color: #1f8a70;
+    .search-box { width: 100% !important; }
 }
