@@ -1,111 +1,215 @@
 
-:root {
-    --verde-agil: #0b7051;
-    --verde-hover: #e9f2f0;
-    --sidebar-width: 250px;
-    --bg-light: #f8f9fa;
-    --transition-smooth: all 0.3s ease;
-}
-
 body {
-    background-color: var(--bg-light);
+    background-color: #f5f5f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
 }
-
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--sidebar-width);
+    width: 250px;
     height: 100vh;
-    background-color: #ffffff;
-    border-right: 1px solid #dee2e6;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem !important;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0000000d;
+    transition: all 0.3s ease;
 }
 
-.sidebar .nav-link {
-    color: #6c757d !important;
-    transition: var(--transition-smooth);
-    border-radius: 12px;
-    padding: 12px 15px !important;
+.logo {
+    font-weight: bold;
+    color: #6c9c8c;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
-    font-weight: 500;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+}
+
+.nav-link {
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #e9f5f1;
+    border-radius: 8px;
+    color: #2c7a7b;
+}
+
+.nav-bottom {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+}
+
+.header {
+    background: transparent !important;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    border: none;
+    background: #e9e9e9;
+    height: 40px;
+}
+
+.search-box input:focus {
+    box-shadow: none;
+    background: #e9e9e9;
+}
+
+.colaborators-card {
+    background: #1f8a70;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.faq-banner {
+    background-color: #067254; 
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.faq-banner h2 {
+    font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
-
-.sidebar .nav-link:hover, 
-.sidebar .nav-link.active {
-    color: var(--verde-agil) !important;
-    background-color: var(--verde-hover) !important;
+.accordion-item {
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
 }
 
-.sidebar .nav-link:hover i,
-.sidebar .nav-link.active i {
-    color: var(--verde-agil) !important;
+.accordion-button {
+    font-weight: 500;
+    color: #333 !important;
+    background-color: transparent !important;
+    padding-left: 0 !important;
 }
 
-
-main {
-    margin-left: var(--sidebar-width);
-    width: calc(100% - var(--sidebar-width));
-    min-height: 100vh;
+.accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+    color: #067254 !important;
 }
 
-
-.header-integrated {
-    background-color: #ffffff;
-    border-bottom: 1px solid #dee2e6;
-    padding: 1rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999; 
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    padding: 12px;
+    background-size: 12px;
+    background-position: center;
 }
 
-.banner { 
-    background-color: var(--verde-agil); 
-}
-
-.tabela-header { 
-    background: linear-gradient(90deg, #40b094 0%, var(--verde-agil) 100%); 
-}
-
-.sticky-column {
-    position: sticky;
-    top: 100px; 
-}
-
-
-.nav-link-item {
-    transition: var(--transition-smooth);
-}
-
-.nav-link-item:hover {
-    background-color: var(--verde-hover);
-    transform: translateX(5px);
+.accordion-body {
+    padding-left: 0 !important;
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 70px;
-        padding: 1rem 0.5rem !important;
+    .d-flex.flex-md-row {
+        flex-direction: column !important;
+        padding: 10px !important;
     }
-    
-    .sidebar .ms-3, .sidebar .nav-link span {
+
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-between;
+        position: static !important;
+        border-radius: 10px;
+    }
+
+    .logo {
+        margin-bottom: 0 !important;
+    }
+
+    .sidebar .nav {
+        flex-direction: row !important;
+        gap: 5px;
+    }
+
+    .nav-link {
+        margin-bottom: 0 !important;
+        padding: 10px !important;
+    }
+
+    .nav-bottom {
         display: none; 
     }
-    
-    main {
-        margin-left: 70px;
-        width: calc(100% - 70px);
+
+    .header {
+        flex-direction: column-reverse;
+        gap: 15px;
+        align-items: flex-start !important;
     }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .user {
+        align-self: flex-end;
+    }
+
+    .faq-banner {
+        padding: 25px !important;
+    }
+    
+    .faq-banner h2 {
+        font-size: 1.6rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-link i {
+        font-size: 1.3rem;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+}
+
+.item-colaborador {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px; /* Adicionado para o fundo não ficar quadrado */
+}
+
+/* Hover Individual por ID */
+#func-pedro:hover { background-color: #e9f5f1; transform: translateX(8px); }
+#func-paulo:hover { background-color: #e9f5f1; transform: translateX(8px); }
+#func-ana:hover { background-color: #e9f5f1; transform: translateX(8px); }
+#func-maria:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-felipe:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-marina:hover { background-color: #e9f5f1; transform: translateX(8px); } 
+#func-bruno:hover { background-color: #e9f5f1; transform: translateX(8px); }
+
+/* Efeito nos ícones e textos */
+.item-colaborador:hover i {
+    color: #1f8a70 !important;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.item-colaborador:hover h6 {
+    color: #1f8a70;
 }
