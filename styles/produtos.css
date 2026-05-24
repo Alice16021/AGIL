@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-/* --- ESTRUTURA SIDEBAR (PADRONIZADA) --- */
+
 .sidebar {
     width: var(--sidebar-width);
     height: 100vh;
@@ -63,7 +63,7 @@ body {
     padding-top: 20px;
 }
 
-/* --- CONTEÚDO E HEADER --- */
+
 .header {
     background: transparent;
     padding: 15px 0;
@@ -77,7 +77,7 @@ body {
     border-radius: 50px;
 }
 
-/* --- CARDS E NOTIFICAÇÕES --- */
+
 .item-notificacao, .item-colaborador {
     transition: all 0.3s ease;
     cursor: pointer;
@@ -127,7 +127,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* --- RESPONSIVIDADE (Onde a mágica acontece) --- */
+
 @media (max-width: 768px) {
     /* Container pai passa a ser coluna */
     .d-flex.flex-column.flex-md-row {

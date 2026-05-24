@@ -47,14 +47,6 @@ body {
   margin-bottom: 10px;
 }
 
-a {
-    color: #272727;
-    text-decoration: none;
-}
-a:hover {
-    color: #0d9488;            
-    text-decoration: underline; 
-}
 
 .input-group {
   margin-bottom: 20px;
@@ -82,28 +74,34 @@ a:hover {
 }
 
 .btn-login {
+  display: inline-block;
+  text-align: center;
   width: 100%;
   padding: 8px;
   background-color: #272727;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .btn-login1 {
+  display: inline-block;
+  text-align: center;
   width: 100%;
   padding: 10px;
   background-color: #eae9e8;
-  color: #272727;
+  color: #ffffff !important;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
+  text-decoration: none;
 }
 
 .btn-login1:hover {
