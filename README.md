@@ -31,4 +31,6 @@ estoque pelo celular no almoxarifado.
 6. MODELO DE NEGÓCIO
 Software as a Service (SaaS) com mensalidades acessíveis, focado em 
 escalabilidade e automação de relatórios para tomada de decisão.
-"""
+
+7. SITE
+   Para ver a idealização das telas, acesse: https://canva.link/vj2kodwl066f2cm
