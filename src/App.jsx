@@ -6,6 +6,7 @@ import Notificacoes from './pages/Notificacoes';
 import Funcionarios from './pages/Funcionarios';
 import Ajuda from './pages/Ajuda';
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,8 +17,10 @@ function App() {
         <Route path="/" element={<Navigate to="/produtos" replace />} />
 
         {/*
+        <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/inicio" element={<Inicio />} />
         */}
+        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/historico" element={<Historico />} />
         <Route path="/notificacoes" element={<Notificacoes />} />
