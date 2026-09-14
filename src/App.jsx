@@ -1,14 +1,30 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Produtos from './pages/Produtos';
+import Historico from './pages/Historico';
+import Notificacoes from './pages/Notificacoes';
+import Funcionarios from './pages/Funcionarios';
+import Ajuda from './pages/Ajuda';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div></div>
+    <Router>
+      <Routes>
+        {/* Rota padrão: redireciona para o Início logo que abre o site */}
+        <Route path="/" element={<Navigate to="/produtos" replace />} />
+
+        {/*
+          <Route path="/inicio" element={<Inicio />} />
+        */}
+        <Route path="/produtos" element={<Produtos />} />
+        <Route path="/historico" element={<Historico />} />
+        <Route path="/notificacoes" element={<Notificacoes />} />
+        <Route path="/funcionarios" element={<Funcionarios />} />
+        <Route path="/ajuda" element={<Ajuda />} />
+      </Routes>
+    </Router>
   );
 };
 
