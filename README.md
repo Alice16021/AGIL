@@ -42,3 +42,4 @@ escalabilidade e automação de relatórios para tomada de decisão.
 8. TELAS
    Para ver a idealização das telas, acesse: https://canva.link/vj2kodwl066f2cm
 
+   
