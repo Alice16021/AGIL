@@ -5,6 +5,7 @@ import Historico from './pages/Historico';
 import Notificacoes from './pages/Notificacoes';
 import Funcionarios from './pages/Funcionarios';
 import Ajuda from './pages/Ajuda';
+import Home from './pages/Home';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         {/* Rota padrão: redireciona para o Início logo que abre o site */}
         <Route path="/" element={<Navigate to="/produtos" replace />} />
+        <Route path="/Home" element={<Home />} />
 
         {/*
           <Route path="/inicio" element={<Inicio />} />
