@@ -13,7 +13,8 @@ que controle a entrada/saída de insumos em tempo real.
 - Logística: Planejamento estratégico de movimentação.
 
 3. DIFERENCIAIS TÉCNICOS
-- Tecnologias: HTML5, CSS3 e Bootstrap.
+- Tecnologias: React, JavaScript, HTML5 e CSS3.
+- Ferramentas: Vite, Git, GitHub e Visual Studio code.
 - Interface: Design limpo, intuitivo e focado em UX.
 - Responsividade: Funciona perfeitamente em desktops e smartphones.
 - Segurança: Total conformidade com a LGPD.
@@ -32,5 +33,12 @@ estoque pelo celular no almoxarifado.
 Software as a Service (SaaS) com mensalidades acessíveis, focado em 
 escalabilidade e automação de relatórios para tomada de decisão.
 
-7. SITE
+7. FUNCIONALIDADES
+- Gestão Inteligente de Estoque: Cadastre, atualize e monitore insumos e medicamentos em tempo real.
+- Controle de Acesso e Identidade: Perfis de permissão diferenciados entre Gestor e colaborador.
+- Alertas de Níveis Mínimos: Sinalização de insumos abaixo do esperado (em desenvolvimento).
+- Relatórios e Histórico: Visualização de movimentações para tomadas de decisão rápidas e alinhadas às necessidades da clínica (em desenvolvimento).
+
+8. TELAS
    Para ver a idealização das telas, acesse: https://canva.link/vj2kodwl066f2cm
+
