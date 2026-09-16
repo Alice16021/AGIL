@@ -1,28 +1,31 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Cadastro from './pages/Cadastro';
+import PaginaInicial from './pages/PaginaInicial';
 import Produtos from './pages/Produtos';
 import Historico from './pages/Historico';
 import Notificacoes from './pages/Notificacoes';
 import Funcionarios from './pages/Funcionarios';
 import Ajuda from './pages/Ajuda';
-import Home from './pages/Home';
-
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <Router>
       <Routes>
-        {/* Rota padrão: redireciona para o Início logo que abre o site */}
-        <Route path="/" element={<Navigate to="/produtos" replace />} />
-        <Route path="/Home" element={<Home />} />
+        {/* Landing Page Pública */}
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
 
-        {/*
+        {/* Autenticação */}
+        <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/inicio" element={<Inicio />} />
-        */}
-        <Route path="/cadastro" element={<Cadastro />} />
+
+        {/* Dashboard e Tela Inicial do Gestor */}
+        <Route path="/inicio-gestor" element={<PaginaInicial />} />
+        <Route path="/inicio" element={<PaginaInicial />} />
+
+        {/* Funcionalidades */}
         <Route path="/produtos" element={<Produtos />} />
         <Route path="/historico" element={<Historico />} />
         <Route path="/notificacoes" element={<Notificacoes />} />
@@ -31,6 +34,6 @@ function App() {
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;

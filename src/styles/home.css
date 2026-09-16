@@ -1,26 +1,135 @@
-.hero-section {
-    background: linear-gradient(180deg, #ffffff 0%, #348b7ccf 30%, #209F8A 100%);
-    min-height: 500px;
-    padding-bottom: 200px;
+/* =========================================================
+   RESET GLOBAL & AJUSTES PARA VITE / REACT
+   ========================================================= */
+html, body, #root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.logo-texto-hero {
-    font-size: clamp(6rem, 15vw, 12rem);
-    line-height: 1;
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
-.bg-white-transparent {
-    background-color: #b7d0cbbd;
-    backdrop-filter: blur(10px);
+/* =========================================================
+   NAVBAR (Pílula Flutuante)
+   ========================================================= */
+.navbar-fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    padding: 12px 16px;
+    pointer-events: none; /* Permite cliques fora da pílula passar direto */
+}
+
+.navbar-pill {
+    pointer-events: auto;
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: rgba(183, 208, 203, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50rem;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 38px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    display: block;
 }
 
 .login-btn {
-    border-color: rgba(255, 255, 255, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    color: #ffffff !important;
+    background: transparent;
+    transition: all 0.25s ease-in-out;
+    font-weight: 500;
 }
 
 .login-btn:hover {
-    background-color: white !important;
+    background-color: #ffffff !important;
     color: #0d8a72 !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   HERO SECTION (Centralização e Responsividade)
+   ========================================================= */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    height: 70vh;
+    max-height: 680px;
+    background: linear-gradient(180deg, #ffffff 0%, #348b7ccf 28%, #209F8A 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 130px 24px 32px 24px; /* Aumentado de 100px para 130px para afastar o texto da navbar */
+    color: #ffffff;
+}
+
+/* ÁREA CENTRAL DO 'AGIL' (Centralização perfeita) */
+.hero-center-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-texto-hero {
+    font-size: clamp(4.5rem, 14vw, 10rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    user-select: none;
+}
+
+/* TEXTO INFERIOR DO HERO */
+.hero-bottom-content {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.hero-description {
+    max-width: 320px;
+    font-size: 0.925rem;
+    line-height: 1.35;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* =========================================================
+   CARDS E UTILITÁRIOS
+   ========================================================= */
+.bg-white-transparent {
+    background-color: rgba(183, 208, 203, 0.75);
 }
 
 .rounded-5 {
@@ -28,19 +137,32 @@
 }
 
 .rounded-4 {
-    border-radius: 1.2rem !important;
-}
-
-body {
-    background-color: #FFFFFF;
-}
-
-h1 {
-    letter-spacing: -2px;
+    border-radius: 1.25rem !important;
 }
 
 .rounded-circle {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     object-fit: cover;
+}
+
+/* =========================================================
+   MEDIA QUERIES (Mobile)
+   ========================================================= */
+@media (max-width: 576px) {
+    .navbar-pill {
+        padding: 6px 16px;
+    }
+    
+    .hero-section {
+        min-height: 450px;
+        height: 60vh;
+        padding-top: 110px; /* Ajustado proporcionalmente para telas menores */
+        padding-bottom: 20px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        text-align: center;
+    }
 }

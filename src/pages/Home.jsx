@@ -4,15 +4,15 @@ import AboutSection from "../components/AboutSection";
 import FeatureSection from "../components/FeatureSection";
 import TestimonialSection from "../components/TestimonialSection";
 import Footer from "../components/Footer";
+import "../styles/home.css";
 
 export default function Home() {
     return (
         <>
             <Navbar />
-
             <HeroSection />
 
-            <main className="container mb-5 pb-5">
+            <main className="container my-5">
                 <AboutSection />
 
                 <div className="row g-4 align-items-start">

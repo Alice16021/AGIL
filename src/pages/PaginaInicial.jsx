@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import BemVindo from './BemVindo';
-import TableCard from './TableCard';
-import Equipe from './Equipe';
-import Footer from './Footer';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/Header';
+import BemVindo from '../components/BemVindo';
+import TableCard from '../components/TableCard';
+import Equipe from '../components/Equipe';
+import Footer from '../components/Footer';
 
 export default function PaginaInicial() {
     // Dados de exemplo para preencher dentro do TableCard
@@ -34,12 +34,11 @@ export default function PaginaInicial() {
             {/* Wrapper principal Flex: Lado a lado no Desktop, coluna no Mobile */}
             <div className="d-flex flex-column flex-md-row flex-grow-1">
                 
-                {/* 1. Sidebar (Sticky no Desktop, Horizontal no Mobile) */}
+                {/* 1. Sidebar */}
                 <Sidebar active="inicio" />
 
-                {/* 2. Área de Conteúdo Conteúdo Principal */}
+                {/* 2. Área de Conteúdo Principal */}
                 <main className="flex-grow-1 p-3 p-md-4 d-flex flex-column">
-                    {/* Header Transparente com Busca e Perfil */}
                     <Header />
 
                     <div className="container-fluid flex-grow-1 p-0">
@@ -77,7 +76,6 @@ export default function PaginaInicial() {
                             </div>
 
                             <div className="col-12 col-lg-4">
-                                {/* Componente da Equipe */}
                                 <Equipe onVerTodos={() => alert('Ver todos os membros')} />
                             </div>
                         </div>
